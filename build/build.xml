@@ -113,7 +113,7 @@
             <arg line='-output ../temp/swc/${name}.swc'/>
             <arg line='-swf-version=14'/>
             <arg line='-external-library-path+="${FLEX_HOME}/frameworks/libs/air/airglobal.swc"'/>
-            <arg line='-include-classes ${classlist}'/>
+            <arg line='-include-classes ${classlist}' />
         </exec>
 
         <unzip src="../temp/swc/${name}.swc" dest="../temp/swc/content" overwrite="true"/>

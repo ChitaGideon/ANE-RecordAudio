@@ -154,14 +154,17 @@ package
 		protected static function onStatus(event:StatusEvent):void
 		{
 			var url:String = event.level;
-			var f:File = File.applicationDirectory;
-			var pureName:String = saveName.replace(/\..*/g, "");
+//			var f:File = File.applicationDirectory;
+//			if(saveName)
+//			{
+//				var pureName:String = saveName.replace(/\.[^\/]*$/g, "");
+//			}
 			if(event.code == 'stoped' && stopedCallback["stopRecord"])
 			{
 //				if(url.indexOf('|') != -1)
 //				{
 //					trace('url has problem, auto fix');
-					url = f.nativePath.replace(f.name, '')+'tmp/'+saveName;
+//					url = f.nativePath.replace(f.name, '')+'tmp/'+saveName;
 //				}
 				trace('Saved: '+url);
 				stopedCallback["stopRecord"](url);
@@ -169,11 +172,11 @@ package
 			}else if(event.code == 'mp3_converted' && stopedCallback["toMp3"])
 			{
 				
-				url = f.nativePath.replace(f.name, '')+'tmp/'+pureName+'.mp3';
+//				url = f.nativePath.replace(f.name, '')+'tmp/'+pureName+'.mp3';
 				stopedCallback["toMp3"](url);
 				stopedCallback["toMp3"]=null;
 			}else if(event.code == 'amrConverted' && stopedCallback["toAmr"]){
-				url = f.nativePath.replace(f.name, '')+'tmp/'+pureName+'.amr';
+//				url = f.nativePath.replace(f.name, '')+'tmp/'+pureName+'.amr';
 				stopedCallback["toAmr"](url);
 				stopedCallback["toAmr"]=null;
 			}else if(event.code == 'amrPlayCompleted' && stopedCallback["playAmr"]){

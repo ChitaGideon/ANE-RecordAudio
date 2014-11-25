@@ -137,6 +137,7 @@
         _saveName = saveName;
 
         _recordedFile = [[NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingString:saveName]]retain];
+        NSLog(@"recordpath:%@      ||||   %@",_recordedFile.filePathURL,[_recordedFile path]);
         NSError* error;
         _recorder = [[AVAudioRecorder alloc] initWithURL:_recordedFile settings:settings error:&error];
         NSLog(@"%@ 3", [error description]);
@@ -221,9 +222,15 @@
         [_recorder release];
         _recorder = nil;
         
-        NSData *someData = [[_recordedFile path] dataUsingEncoding:NSUTF8StringEncoding];
-        const void *bytes = [someData bytes];
-        uint8_t *crypto_data = (uint8_t*)bytes;
+//        NSData *someData = [[_recordedFile path] dataUsingEncoding:NSUTF8StringEncoding];
+        
+        const char *string = [[_recordedFile path] UTF8String];
+//        const void *bytes = [someData bytes];
+//        uint8_t *crypto_data = (uint8_t*)bytes;
+        const uint8_t *crypto_data = (const uint8_t*)string;
+
+//        FREObject retStr;
+//        FRENewObjectFromUTF8(strlen(string)+1, (const uint8_t*)string, &retStr);
         
         FREDispatchStatusEventAsync(self.freContext, stoped, crypto_data);
     }
@@ -318,9 +325,9 @@
     BOOL writeBool = [amrData writeToFile:amrFilePath atomically:YES];
     // 打印转换后的AMR的长度
     //NSLog(@"转换后的AMR文件总长度 :%d \n", [amrData length]);
-
+ 
     //FREResult result =
-    FREDispatchStatusEventAsync(self.freContext, amrConverted, amrConverted);
+    FREDispatchStatusEventAsync(self.freContext, amrConverted,   (const uint8_t*) [amrFilePath UTF8String]);
     
    // NSLog(@"toAmr5 %d %d", writeBool,result);
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EAB8E153-2FC9-42EF-B29B-5DA746718084</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RecordAudio</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6F80E29E8F38453432AD004C2F0131358A9447DA</key>
+		<string>https://github.com/mani95lisa/ANE-RecordAudio.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/RecordAudio.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6F80E29E8F38453432AD004C2F0131358A9447DA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mani95lisa/ANE-RecordAudio.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6F80E29E8F38453432AD004C2F0131358A9447DA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6F80E29E8F38453432AD004C2F0131358A9447DA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ANE-RecordAudio</string>
+		</dict>
+	</array>
+</dict>
+</plist>
