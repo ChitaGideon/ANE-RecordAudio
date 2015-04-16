@@ -91,7 +91,30 @@ package
 				extensionContext.call('stopRecord');	
 			}
 		}
-
+		/**
+		 * resume Record
+		 * 
+		 * @callback return recorded file's url
+		 */
+		public function resumeRecord():void
+		{
+			if (extensionContext)
+			{
+				extensionContext.call('resumeRecord');	
+			}
+		}
+		/**
+		 * pause Record
+		 * 
+		 * @callback return recorded file's url
+		 */
+		public function pauseRecord():void
+		{
+			if (extensionContext)
+			{
+				extensionContext.call('pauseRecord');	
+			}
+		}		
 		/**
 		 * Convert recorded audio to mp3
 		 * 

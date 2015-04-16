@@ -21,7 +21,7 @@
     
     BOOL                            _hasCAFFile;
     BOOL                            _recording;
-    BOOL                            _playing;
+    BOOL                            _pause;
     BOOL                            _hasMp3File;
     BOOL                            _playingMp3;
     
@@ -39,6 +39,8 @@
 
 -(void) startRecord:(NSString*)saveName index:(NSString*)index sampleRate:(NSString *)sampleRate;
 -(void) stopRecord;
+-(void) pauseRecord;
+-(void) resumeRecord;
 -(void) toMp3;
 -(void) toAmr;
 

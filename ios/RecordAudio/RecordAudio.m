@@ -62,7 +62,22 @@ FREObject stopRecord(FREContext context, void* funcData, uint32_t argc, FREObjec
     
     return nil;
 }
-
+FREObject pauseRecord(FREContext context, void* funcData, uint32_t argc, FREObject argv[]){
+    NSLog(@"Call pauseRecord Function");
+    
+    RecordController* rc = funcData;
+    [rc pauseRecord];
+    
+    return nil;
+}
+FREObject resumeRecord(FREContext context, void* funcData, uint32_t argc, FREObject argv[]){
+    NSLog(@"Call resumeRecord Function");
+    
+    RecordController* rc = funcData;
+    [rc resumeRecord];
+    
+    return nil;
+}
 FREObject toMp3(FREContext context, void* funcData, uint32_t argc, FREObject argv[]){
     NSLog(@"Call to mp3");
     
@@ -121,7 +136,7 @@ FREObject playAmr(FREContext context, void* funcData, uint32_t argc, FREObject a
 
 void RecordAudioContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctionsToTest,
                                    const FRENamedFunction** functionsToSet){
-    uint numOfFun = 6;
+    uint numOfFun = 8;
     
     FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * numOfFun);
     *numFunctionsToTest = numOfFun;
@@ -158,7 +173,13 @@ void RecordAudioContextInitializer(void* extData, const uint8_t* ctxType, FRECon
     func[5].functionData = pa;
     func[5].function = &stopAmr;
 
+    func[6].name = (const uint8_t*) "pauseRecord";
+    func[6].functionData = rc;
+    func[6].function = &pauseRecord;
     
+    func[7].name = (const uint8_t*) "resumeRecord";
+    func[7].functionData = rc;
+    func[7].function = &resumeRecord;
     
     *functionsToSet = func;
     

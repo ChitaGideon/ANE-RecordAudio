@@ -72,7 +72,20 @@ package
 		public function stopRecord(callback:Function):void
 		{
 		}
+		
+		public function pauseRecord():void
+		{
 
+		}
+		/**
+		 * resume Record
+		 * 
+		 * @callback return recorded file's url
+		 */
+		public function resumeRecord():void
+		{
+
+		}
 		/**
 		 * Convert recorded audio to mp3
 		 * 

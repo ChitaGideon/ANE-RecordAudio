@@ -93,7 +93,7 @@
         NSInteger sr = [sampleRate intValue];
         _sampleRate  = sr;
         _quality     = AVAudioQualityLow;
-        _recording = _playing = _hasCAFFile = NO;
+        _recording = _pause = _hasCAFFile = NO;
         NSInteger findex = [index intValue];
         NSLog(@"Record Format %ld", (long)findex);
         _formatIndex = [self formatIndexToEnum:findex];
@@ -204,7 +204,45 @@
 //                                NSLog(@"StartRecord5");
     }
 }
-
+- (void) pauseRecord
+{
+    if(_recording)
+    {
+//        _recording = NO;
+        _pause = YES;
+        
+//        [_timer invalidate];
+//        _timer = nil;
+        
+        if (_recorder)
+        {
+     
+            [_recorder pause];
+        }
+       
+        
+    }
+}
+- (void) resumeRecord
+{
+    if(_recording)
+    {
+        if(_pause)
+        {
+        //        _recording = NO;
+        _pause = NO;
+        
+        //        [_timer invalidate];
+        //        _timer = nil;
+        
+        if (_recorder)
+        {
+            //            _hasCAFFile = YES;
+            [_recorder record];
+        }
+        }
+    }
+}
 - (void) stopRecord
 {
     if(_recording)
