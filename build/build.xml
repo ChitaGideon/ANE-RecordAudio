@@ -6,7 +6,7 @@
 
     <!-- All -->
     <!-- <target name="all" depends="android,ios,ios-simulator,swc-mobile,swc-default,package" description="Full build of extension"/> -->
-    <target name="all" depends="ios,swc-mobile,swc-default,package" description="Full build of extension"/>
+    <target name="all" depends="ios,swc-mobile,package" description="Full build of extension"/>
     <!-- <target name="ios" depends="ios,ios-simulator,android,swc-mobile,swc-default,package" description="Full build of extension"/> -->
     <!-- <target name="all" depends="android" description="Full build of extension"/> -->
 
@@ -166,7 +166,8 @@
 
     <!-- Package -->
     <target name="package" description="Create the extension package">
-        <exec executable="${FLEX_HOME}/bin/adt${bin.ext}" failonerror="true" dir="../temp">
+      <exec executable="${FLEX_HOME}/bin/adt${bin.ext}" failonerror="true" dir="../temp">
+            <env key="AIR_SDK_HOME" value="${FLEX_HOME}"/>
             <arg value="-package"/>
             <arg value="-target"/>
             <arg value="ane"/>
@@ -174,7 +175,7 @@
             <arg value="../build/extension.xml"/>
             <arg line="-swc swc/${name}.swc"/>
             <arg line="-platform iPhone-ARM -platformoptions ../build/platform.xml -C ios/ ."/>
-            <!-- <arg line="-platform iPhone-x86 -C ios-simulator/ ."/> -->
+            <!--<arg line="-platform iPhone-x86 -C ios-simulator/ ."/>-->
             <!-- <arg line="-platform Android-ARM -C android/ ."/> -->
             <arg line="-platform default -C default/ ."/>
         </exec>

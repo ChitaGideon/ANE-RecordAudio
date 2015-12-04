@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A69691B1AF07CCD00236AF9 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CFA17BF18B4958800A2173E /* libmp3lame.a */; };
+		3A69691C1AF07CCD00236AF9 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8B9B8418EAF8BD00BA87FB /* libopencore-amrnb.a */; };
+		3A69691D1AF07CCD00236AF9 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8B9B8518EAF8BD00BA87FB /* libopencore-amrwb.a */; };
+		3A6969201AF07CCD00236AF9 /* libopencore-amrnb.a.arm64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A69691E1AF07CCD00236AF9 /* libopencore-amrnb.a.arm64 */; };
+		3A6969211AF07CCD00236AF9 /* libopencore-amrwb.a.arm64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A69691F1AF07CCD00236AF9 /* libopencore-amrwb.a.arm64 */; };
+		3A6969231AF07E6000236AF9 /* libmp3lame-arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6969221AF07E6000236AF9 /* libmp3lame-arm64.a */; };
 		3C86524618B49CDC00096B14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C86524518B49CDC00096B14 /* UIKit.framework */; };
 		3C8B9B8918EAF8BD00BA87FB /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B9B7C18EAF8BD00BA87FB /* amrFileCodec.m */; };
-		3C8B9B8A18EAF8BD00BA87FB /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8B9B8418EAF8BD00BA87FB /* libopencore-amrnb.a */; };
-		3C8B9B8B18EAF8BD00BA87FB /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8B9B8518EAF8BD00BA87FB /* libopencore-amrwb.a */; };
 		3C8B9B8C18EAF8BD00BA87FB /* PlayAMR.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B9B8818EAF8BD00BA87FB /* PlayAMR.m */; };
 		3CFA179818B4930900A2173E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CFA179718B4930900A2173E /* Foundation.framework */; };
 		3CFA179D18B4930900A2173E /* RecordAudio.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CFA179C18B4930900A2173E /* RecordAudio.h */; };
 		3CFA179F18B4930900A2173E /* RecordAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFA179E18B4930900A2173E /* RecordAudio.m */; };
-		3CFA17C018B4958800A2173E /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CFA17BF18B4958800A2173E /* libmp3lame.a */; };
 		3CFA17C218B4967200A2173E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CFA17C118B4967200A2173E /* AVFoundation.framework */; };
 		3CFA17C418B4967E00A2173E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CFA17C318B4967E00A2173E /* AudioToolbox.framework */; };
 		3CFA17C718B499F100A2173E /* RecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFA17C618B499F100A2173E /* RecordController.m */; };
@@ -35,6 +38,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A69691E1AF07CCD00236AF9 /* libopencore-amrnb.a.arm64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libopencore-amrnb.a.arm64"; path = "RecordAudio/libopencore-amrnb.a.arm64"; sourceTree = "<group>"; };
+		3A69691F1AF07CCD00236AF9 /* libopencore-amrwb.a.arm64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libopencore-amrwb.a.arm64"; path = "RecordAudio/libopencore-amrwb.a.arm64"; sourceTree = "<group>"; };
+		3A6969221AF07E6000236AF9 /* libmp3lame-arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libmp3lame-arm64.a"; path = "RecordAudio/libmp3lame-arm64.a"; sourceTree = "<group>"; };
 		3C86524518B49CDC00096B14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C8B9B7B18EAF8BD00BA87FB /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
 		3C8B9B7C18EAF8BD00BA87FB /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
@@ -70,13 +76,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8B9B8A18EAF8BD00BA87FB /* libopencore-amrnb.a in Frameworks */,
 				3C86524618B49CDC00096B14 /* UIKit.framework in Frameworks */,
+				3A6969231AF07E6000236AF9 /* libmp3lame-arm64.a in Frameworks */,
+				3A6969201AF07CCD00236AF9 /* libopencore-amrnb.a.arm64 in Frameworks */,
+				3A6969211AF07CCD00236AF9 /* libopencore-amrwb.a.arm64 in Frameworks */,
+				3A69691B1AF07CCD00236AF9 /* libmp3lame.a in Frameworks */,
+				3A69691C1AF07CCD00236AF9 /* libopencore-amrnb.a in Frameworks */,
+				3A69691D1AF07CCD00236AF9 /* libopencore-amrwb.a in Frameworks */,
 				3CFA17C418B4967E00A2173E /* AudioToolbox.framework in Frameworks */,
 				3CFA17C218B4967200A2173E /* AVFoundation.framework in Frameworks */,
 				3CFA179818B4930900A2173E /* Foundation.framework in Frameworks */,
-				3C8B9B8B18EAF8BD00BA87FB /* libopencore-amrwb.a in Frameworks */,
-				3CFA17C018B4958800A2173E /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +149,9 @@
 		3CFA179618B4930900A2173E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A6969221AF07E6000236AF9 /* libmp3lame-arm64.a */,
+				3A69691E1AF07CCD00236AF9 /* libopencore-amrnb.a.arm64 */,
+				3A69691F1AF07CCD00236AF9 /* libopencore-amrwb.a.arm64 */,
 				3C86524518B49CDC00096B14 /* UIKit.framework */,
 				3CFA17C318B4967E00A2173E /* AudioToolbox.framework */,
 				3CFA17C118B4967200A2173E /* AVFoundation.framework */,
